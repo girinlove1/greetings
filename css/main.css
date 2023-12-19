@@ -1,0 +1,781 @@
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/variable/pretendardvariable.css");
+@import url("https://use.typekit.net/bto3byu.css");
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  -webkit-touch-callout: none;
+  user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -webkit-user-select: none;
+  transition: 0.3s;
+}
+
+ul, ol, li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  outline: 0;
+}
+a:visited {
+  color: rgb(226, 171, 182);
+}
+
+img {
+  border: 0;
+}
+
+body {
+  background-color: black;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+body .capt {
+  pointer-events: none;
+  position: absolute;
+  width: 365px;
+  height: 633px;
+  background-color: black;
+  z-index: 0;
+  top: 0%;
+  left: 0%;
+  opacity: 0.8;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+body .capt img {
+  width: 365px;
+  object-fit: contain;
+}
+body .capt .input {
+  width: 174px;
+  height: 68px;
+  top: 39%;
+  left: 25%;
+  position: absolute;
+  font-weight: 700;
+  letter-spacing: -1px;
+  color: gray;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+body .capt .input p {
+  font: normal 6px/1 "Pretendard Variable";
+  color: gray;
+}
+body .capt .input h2 {
+  font: normal 8px/1 "Pretendard Variable";
+  color: gray;
+  margin-bottom: 10px;
+}
+body .captno {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  background-color: black;
+}
+
+main {
+  position: absolute;
+  top: 0%;
+  height: 0%;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+main .top {
+  opacity: 0;
+  position: absolute;
+  z-index: 7;
+  top: 20px;
+  left: 0%;
+  width: 100%;
+  height: fit-content;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+}
+main .top.on {
+  opacity: 1;
+}
+main .top .logo {
+  width: 100%;
+  height: 108px;
+  pointer-events: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #395ba7;
+  mask-image: url("../img/logo-03.png");
+  -webkit-mask-image: url("../img/logo-03.png");
+  mask-size: 100%;
+  display: block;
+  -webkit-mask-size: 180px;
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-position: top;
+  mask-position: top;
+}
+main .top .logo.click {
+  background-color: whitesmoke;
+  -webkit-mask-size: 118px;
+}
+main .top .btn {
+  z-index: 5;
+  width: 90px;
+  height: 25px;
+  border-radius: 20px;
+  background-color: transparent;
+  border: 1px solid #395ba7;
+  box-shadow: 0px 0px 10px #395ba7;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+}
+main .top .btn p {
+  color: #395ba7;
+  text-shadow: 0px 0px 10px #395ba7;
+  font: bold 12px/1 "Helvetica";
+  letter-spacing: -1px;
+}
+main .top .btn.on {
+  opacity: 1;
+  animation: btn 6s linear infinite;
+}
+main .top .btn.on:hover {
+  width: 100px;
+}
+main .top .btn.click {
+  opacity: 0;
+}
+@keyframes btn {
+  25% {
+    background-color: transparent;
+    border: 1px solid #395ba7;
+    box-shadow: 0px 0px 10px #395ba7;
+  }
+  50% {
+    background-color: whitesmoke;
+    border: 1px solid whitesmoke;
+    box-shadow: 0px 0px 10px whitesmoke;
+  }
+  75% {
+    background-color: transparent;
+    border: 1px solid #395ba7;
+    box-shadow: 0px 0px 10px #395ba7;
+  }
+}
+main .top .colors {
+  opacity: 0;
+  margin-top: 78px;
+  position: absolute;
+  width: 120px;
+  height: 25px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+main .top .colors.click {
+  opacity: 1;
+}
+main .top .colors .color {
+  width: 25px;
+  height: 25px;
+  border: 1px solid gray;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+main .top .colors .color.on {
+  background-color: whitesmoke;
+  box-shadow: 0px 0px 10px gray;
+}
+main .top .colors .color img {
+  width: 15px;
+  height: 15px;
+  object-fit: contain;
+}
+main .mid {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  top: 0%;
+  left: 0%;
+}
+main .mid .cards {
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  height: 100%;
+}
+@media (min-width: 680px) {
+  main .mid .cards .card {
+    width: 455px;
+    height: fit-content;
+  }
+  main .mid .cards .card.click {
+    width: 455px;
+    height: fit-content;
+  }
+}
+main .mid .cards .card {
+  opacity: 1;
+  transition: margin-top 3s, width 0.5s;
+  overflow: hidden;
+  width: 75%;
+  height: fit-content;
+  top: 0%;
+  left: 0%;
+  position: absolute;
+  padding: 0px;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  box-shadow: 0px 0px 10px black;
+  transform-origin: center center;
+}
+main .mid .cards .card:hover {
+  width: 80%;
+}
+main .mid .cards .card img {
+  pointer-events: none;
+  width: 100%;
+  object-fit: contain;
+  box-shadow: 0px 0px 10px black;
+}
+main .mid .cards #card2.click, main .mid .cards #card3.click, main .mid .cards #card4.click, main .mid .cards #card5.click, main .mid .cards #card6.click, main .mid .cards #card7.click, main .mid .cards #card8.click {
+  margin-top: 800%;
+}
+main .mid .cards #card1 {
+  top: 60%;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 4;
+}
+main .mid .cards #card1.oh {
+  margin-top: -1000%;
+  opacity: 0;
+}
+main .mid .cards #card1.click {
+  top: 50%;
+  transform: translate(-50%, -50%);
+  transition: top 1s, transfotm 1s;
+}
+main .mid .cards #card2 {
+  top: 80%;
+  left: -10%;
+  transform: rotate(10deg);
+}
+main .mid .cards #card2.oh {
+  margin-top: -100%;
+  opacity: 0;
+}
+main .mid .cards #card3 {
+  top: 80%;
+  left: 42%;
+  transform: rotate(-16deg);
+}
+main .mid .cards #card3.oh {
+  margin-top: -200%;
+  opacity: 0;
+}
+main .mid .cards #card4 {
+  top: 57%;
+  left: -30%;
+  transform: rotate(29deg);
+}
+main .mid .cards #card4.oh {
+  margin-top: -300%;
+  opacity: 0;
+}
+main .mid .cards #card5 {
+  top: 48%;
+  left: 50%;
+  transform: rotate(10deg);
+}
+main .mid .cards #card5.oh {
+  margin-top: -500%;
+  opacity: 0;
+}
+main .mid .cards #card6 {
+  top: 23%;
+  left: -10%;
+  transform: rotate(7deg);
+}
+main .mid .cards #card6.oh {
+  margin-top: -800%;
+  opacity: 0;
+}
+main .mid .cards #card7 {
+  top: 26%;
+  left: 38%;
+  transform: rotate(-14deg);
+}
+main .mid .cards #card7.oh {
+  margin-top: -900%;
+  opacity: 0;
+}
+main .mid .cards #card8 {
+  top: 44%;
+  left: -12%;
+  transform: rotate(166deg);
+}
+main .mid .cards #card8.oh {
+  margin-top: -400%;
+  opacity: 0;
+}
+main .mid .cardsclick {
+  width: 100%;
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  overflow: hidden;
+  height: 100%;
+  transform-origin: center center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+@media (min-width: 680px) {
+  main .mid .cardsclick .ccard.click {
+    width: 455px;
+    height: fit-content;
+  }
+  main .mid .cardsclick.down .ccard.click {
+    width: 390px;
+    height: fit-content;
+  }
+}
+main .mid .cardsclick.down {
+  top: 0%;
+  transition: all 1s;
+}
+main .mid .cardsclick.down .ccard {
+  width: 55%;
+  transition: all 0.8s;
+  top: 51%;
+  box-shadow: 0px 0px 10px black;
+}
+main .mid .cardsclick .ccard {
+  backface-visibility: hidden;
+  overflow: hidden;
+  width: 75%;
+  height: fit-content;
+  top: 50%;
+  left: 50%;
+  box-shadow: 0px 0px 0px black;
+  transition: transform 0.1s;
+  transform: translate(-50%, -50%);
+  z-index: 3;
+  opacity: 0;
+  position: absolute;
+  padding: 0px;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  transform-origin: top center;
+}
+main .mid .cardsclick .ccard img {
+  pointer-events: none;
+  width: 100%;
+  object-fit: contain;
+  box-shadow: 0px 0px 10px black;
+}
+main .mid .cardsclick .ccard.click {
+  opacity: 1;
+}
+main .mid .cardsclick #ccard1 {
+  transform: translate(-50%, -50%) rotateX(0deg);
+  z-index: 4;
+}
+main .mid .cardsclick #ccard2 {
+  backface-visibility: visible;
+  z-index: 3;
+  transform: translate(-50%, -50%) rotateX(0deg) rotateY(180deg);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+main .mid .cardsclick #ccard2 .input {
+  opacity: 0;
+  transform: rotate(180deg);
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  padding: 29px 20px;
+  font: normal 10px/1 "Pretendard Variable";
+  font-weight: 700;
+  letter-spacing: -1px;
+  color: gray;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  text-align: center;
+}
+main .mid .cardsclick #ccard2 .input.on {
+  opacity: 1;
+}
+main .mid .cardsclick #ccard2 .input p {
+  margin-bottom: 5px;
+}
+main .mid .cardsclick #ccard2 .input h2 {
+  font-size: 10px;
+}
+main .mid .cardsclick #ccard3 {
+  z-index: 4;
+}
+main .mid .cardsclick #ccard4 {
+  z-index: 1;
+  backface-visibility: visible;
+}
+main .mid .range {
+  opacity: 0;
+  display: none;
+  bottom: 10%;
+  left: 50%;
+  transform: translateX(-50%);
+  position: absolute;
+  width: 300px;
+  height: fit-content;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: start;
+}
+main .mid .range.on {
+  opacity: 1;
+  display: flex;
+}
+main .mid .range.down {
+  display: none;
+  opacity: 0;
+}
+main .mid .range .rp {
+  display: flex;
+  flex-flow: row;
+  justify-content: space-between;
+  width: 200px;
+  margin-bottom: 5px;
+}
+main .mid .range .rp p {
+  color: rgb(226, 171, 182);
+  font: bold 10px/1 "Helvetica";
+}
+main .mid .range .ran {
+  display: flex;
+  flex-flow: row;
+  align-items: center;
+  justify-content: left;
+}
+main .mid .range .ran .rone {
+  width: 4px;
+  height: 4px;
+  background-color: gray;
+  border-radius: 50%;
+}
+main .mid .range .ran .rbar {
+  width: 180px;
+  height: 1px;
+  background-color: gray;
+}
+main .mid .range .ran .rdrag {
+  width: 10px;
+  height: 10px;
+  background-color: whitesmoke;
+  border-radius: 50%;
+  position: absolute;
+  margin: 0px 7px;
+  z-index: 100;
+}
+main .mid .range .ran .rdrag.drag {
+  display: none;
+}
+main .mid .range .ran1 {
+  position: absolute;
+}
+main .mid .range .ran1 input {
+  -webkit-appearance: none;
+  background: transparent;
+  width: 314px;
+  padding-top: 20px;
+  height: 22px;
+  transform: scale(0.6);
+  accent-color: rgb(226, 171, 182);
+}
+main .mid .range .ran1 input:focus {
+  outline: none;
+}
+main .mid .range .rbtn {
+  opacity: 0;
+  width: 0px;
+  height: 0px;
+  border-radius: 20px;
+  background-color: transparent;
+  border: 1px solid rgb(226, 171, 182);
+  display: flex;
+  flex-flow: row;
+  justify-content: center;
+  align-items: center;
+  margin-top: -800px;
+  color: rgb(226, 171, 182);
+}
+main .mid .range .rbtn.on {
+  opacity: 1;
+  height: 25px;
+  width: 100px;
+  margin-top: 17px;
+}
+main .mid .range .rbtn p {
+  font: bold 8px/1 "Helvetica";
+  letter-spacing: -1px;
+  margin-right: 5px;
+}
+main .mid .range .rbtn i {
+  font-size: 8px;
+  color: rgb(226, 171, 182);
+}
+main .mid .downinput {
+  opacity: 0;
+  display: none;
+  width: 65%;
+  position: absolute;
+  bottom: 10%;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+main .mid .downinput.on {
+  opacity: 1;
+  display: flex;
+}
+main .mid .downinput .back {
+  width: 25px;
+  height: 25px;
+  color: rgb(226, 171, 182);
+  border: 1px solid rgb(226, 171, 182);
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+main .mid .downinput .back i {
+  font-size: 10px;
+}
+main .mid .downinput input {
+  border-radius: 20px;
+  height: 25px;
+  background-color: black;
+  border: 1px solid rgb(226, 171, 182);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: rgba(226, 171, 182, 0.8);
+  padding: 3px;
+  text-align: center;
+  font: bold 10px/1.3 "Pretendard Variable";
+}
+main .mid .downinput #dajim {
+  width: 46%;
+}
+main .mid .downinput #nickname {
+  width: 60px;
+}
+main .mid .downinput .dbtn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 38px;
+  height: 25px;
+  padding: 3px;
+  background-color: rgb(226, 171, 182);
+  border-radius: 20px;
+  border: 1px solid rgb(226, 171, 182);
+}
+main .mid .downinput i {
+  font-size: 10px;
+}
+main .mid .downinput p {
+  font: bold 10px/1.3 "Pretendard Variable";
+  color: whitesmoke;
+  text-shadow: 0px 0px 3px rgba(0, 0, 0, 0.334);
+}
+main footer {
+  transition: opacity 2s;
+  opacity: 0;
+  position: absolute;
+  z-index: 8;
+  width: 100%;
+  height: 100%;
+  top: 0%;
+  left: 0%;
+  pointer-events: none;
+  padding: 15px;
+  color: rgb(226, 171, 182);
+  display: flex;
+  flex-flow: column;
+  justify-content: space-between;
+  align-items: center;
+}
+main footer.on {
+  opacity: 1;
+}
+main footer.click {
+  opacity: 0.5;
+}
+main footer .bar1, main footer .bar2, main footer .barmid {
+  pointer-events: none;
+  width: 100%;
+  height: 25px;
+  display: flex;
+  flex-flow: row;
+  justify-content: space-between;
+  align-items: center;
+}
+main footer .bar1 p, main footer .bar2 p, main footer .barmid p {
+  font: bold 10px/1 "Helvetica";
+}
+main footer .bar1 box1, main footer .bar1 box2, main footer .bar2 box1, main footer .bar2 box2, main footer .barmid box1, main footer .barmid box2 {
+  width: 20px;
+  height: 20px;
+}
+main footer .bar1 box1 img, main footer .bar1 box2 img, main footer .bar2 box1 img, main footer .bar2 box2 img, main footer .barmid box1 img, main footer .barmid box2 img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+main footer .barmid {
+  height: calc(100vh - 100px);
+  width: 100%;
+}
+main footer .barmid.click {
+  opacity: 0;
+}
+main footer .barmid .midmid {
+  display: flex;
+  flex-flow: row;
+  justify-content: space-between;
+  align-items: center;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+}
+main footer .barmid .midmid .text1box, main footer .barmid .midmid .text2box {
+  width: 25px;
+  height: 100%;
+  overflow: hidden;
+}
+main footer .barmid .midmid .text1box p, main footer .barmid .midmid .text2box p {
+  opacity: 0.8;
+  transform: rotate(90deg);
+  transform-origin: left bottom;
+  font: 8px/1 "Pretendard Variable";
+  font-weight: 700;
+  letter-spacing: -1px;
+  text-align: justify;
+  line-break: anywhere;
+  display: inline-block;
+  height: fit-content;
+  width: 100vh;
+  margin-right: 20px;
+  padding-bottom: 6px;
+  display: flex;
+}
+main footer .barmid .midmid .text1box p strong, main footer .barmid .midmid .text2box p strong {
+  color: transparent;
+}
+main .end {
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  position: absolute;
+  background-color: black;
+  top: 0%;
+  left: 0%;
+  z-index: 0;
+  pointer-events: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+main .end.on {
+  opacity: 1;
+  z-index: 6;
+  pointer-events: all;
+}
+main .end .endbox {
+  width: 50%;
+  height: fit-content;
+  color: rgb(226, 171, 182);
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: space-between;
+}
+main .end .endbox .endtop {
+  width: 100%;
+  height: 250px;
+  margin-bottom: 10px;
+  border-radius: 20px;
+  border: 1px solid rgb(226, 171, 182);
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+}
+main .end .endbox .endtop h2 {
+  font: 15px/1.5 "Helvetica";
+  font-weight: 700;
+  letter-spacing: -1px;
+  margin-bottom: 10px;
+}
+main .end .endbox .endtop em {
+  font: normal normal 15px/1 "Arial";
+  margin-bottom: 10px;
+}
+main .end .endbox .endtop p {
+  font: 10px/1.3 "Pretendard Variables";
+  font-weight: 500;
+}
+main .end .endbox .endtop p em {
+  font: 8px/1.2 "Pretendard Variables";
+  font-weight: 500;
+}
+main .end .endbox .endbot {
+  width: 100%;
+  height: 25px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+main .end .endbox .endbot .ebtn {
+  width: 45%;
+  height: 100%;
+  border-radius: 20px;
+  border: 1px solid rgb(226, 171, 182);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+main .end .endbox .endbot .ebtn p {
+  display: block;
+  font: bold 9px/1 "Pretendard Variables";
+}
+
+/*# sourceMappingURL=main.css.map */

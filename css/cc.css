@@ -1,0 +1,648 @@
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/variable/pretendardvariable.css");
+@import url("https://use.typekit.net/bto3byu.css");
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  -webkit-touch-callout: none;
+  user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -webkit-user-select: none;
+  transition: 0.3s;
+}
+
+ul, ol, li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  outline: 0;
+}
+a:visited {
+  color: rgb(133, 35, 28);
+}
+
+img {
+  border: 0;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  background-color: black;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+}
+main .bg {
+  width: 100%;
+  height: 100%;
+  top: 0%;
+  left: 0%;
+  position: absolute;
+}
+main .bg video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+main .bg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  pointer-events: none;
+  z-index: 0;
+}
+main .bg img.on {
+  display: block;
+  z-index: 1;
+}
+main .bgbg {
+  z-index: 0;
+  object-fit: cover;
+  position: fixed;
+  top: 0%;
+  left: 10%;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(120, 120, 120);
+  mask-image: url("../img/bgbg.png");
+  -webkit-mask-image: url("../img/bgbg.png");
+  mask-size: 100%;
+  display: block;
+  -webkit-mask-size: 400%;
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-position: right;
+  mask-position: right;
+  transform-origin: center center;
+}
+main .title {
+  position: absolute;
+  z-index: 8;
+  width: 100%;
+  height: 25px;
+  top: 0%;
+  left: 0%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+}
+main .title p {
+  margin-top: 5px;
+  font: 12px/1 "Helvetica";
+  font-weight: 700;
+  text-align: center;
+  color: rgb(120, 120, 120);
+  text-shadow: 0px 0px 10px rgb(120, 120, 120);
+  letter-spacing: -1px;
+  line-break: anywhere;
+}
+main .entrance {
+  width: 80%;
+  height: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+main .entrance .enb, main .entrance .enf {
+  width: 80%;
+  top: 20%;
+  position: fixed;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: center;
+}
+@keyframes color {
+  0% {
+    color: rgb(133, 35, 28);
+    text-shadow: 0px 0px 3px rgb(133, 35, 28);
+  }
+  50% {
+    color: whitesmoke;
+    text-shadow: 0px 0px 3px whitesmoke;
+  }
+  100% {
+    color: rgb(133, 35, 28);
+    text-shadow: 0px 0px 3px rgb(133, 35, 28);
+  }
+}
+main .entrance .enb p, main .entrance .enf p {
+  animation: color 8s linear infinite;
+  margin-top: 50px;
+  color: rgb(133, 35, 28);
+  text-shadow: 0px 0px 3px rgb(133, 35, 28);
+  font: 16px/1 "Helvetica";
+  text-align: center;
+  letter-spacing: -1px;
+  font-weight: 700;
+}
+main .entrance .enb a, main .entrance .enf a {
+  display: flex;
+  flex-flow: column;
+  width: 100%;
+  height: 100%;
+}
+main .entrance .enb a img, main .entrance .enf a img {
+  width: 100%;
+  object-fit: contain;
+}
+@keyframes env1 {
+  0% {
+    opacity: 1;
+    transform: rotateY(0deg);
+    transform: rotateZ(10deg);
+  }
+  25% {
+    opacity: 1;
+    transform: rotateY(90deg);
+  }
+  26% {
+    opacity: 0;
+    transform: rotateY(91deg);
+  }
+  50% {
+    opacity: 0;
+    transform: rotateY(180deg);
+  }
+  75% {
+    opacity: 0;
+    transform: rotateY(-90deg);
+  }
+  76% {
+    opacity: 1;
+    transform: rotateY(-91deg);
+  }
+  100% {
+    opacity: 1;
+    transform: rotateY(0deg);
+    transform: rotateZ(10deg);
+  }
+}
+@keyframes env2 {
+  0% {
+    opacity: 0;
+    transform: rotateY(180deg);
+    transform: rotateZ(-10deg);
+  }
+  25% {
+    opacity: 0;
+    transform: rotateY(91deg);
+  }
+  26% {
+    opacity: 1;
+    transform: rotateY(90deg);
+  }
+  50% {
+    opacity: 1;
+    transform: rotateY(0deg);
+  }
+  75% {
+    opacity: 1;
+    transform: rotateY(-90deg);
+  }
+  76% {
+    opacity: 0;
+    transform: rotateY(-91deg);
+  }
+  100% {
+    opacity: 0;
+    transform: rotateY(180deg);
+    transform: rotateZ(-10deg);
+  }
+}
+main .entrance .enb .enba, main .entrance .enf .enba {
+  animation: env1 infinite linear 5s;
+}
+main .entrance .enb .enfa, main .entrance .enf .enfa {
+  animation: env2 infinite linear 5s;
+}
+main .entrance .enb .enfa img, main .entrance .enf .enfa img {
+  position: fixed;
+  top: 20%;
+  display: flex;
+  justify-content: center;
+}
+main .inbox {
+  position: absolute;
+  top: 35%;
+  transform: translateY(-50%);
+  width: 0px;
+  height: 0px;
+  padding: 12% 5%;
+  padding-bottom: 0%;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  text-align: center;
+  opacity: 0;
+}
+main .inbox .letter {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0%;
+  pointer-events: none;
+  display: flex;
+  align-items: center;
+  flex-flow: column;
+}
+main .inbox .letter img {
+  width: 100%;
+  z-index: 1;
+}
+main .inbox .letter .envv {
+  margin-top: -76%;
+  width: 110%;
+  bottom: 0%;
+  left: 0%;
+}
+main .inbox .letter .envv img {
+  position: absolute;
+  left: 0%;
+}
+main .inbox .letter .envv #bbb {
+  z-index: 0;
+}
+main .inbox.on {
+  opacity: 1;
+  width: 80%;
+  height: fit-content;
+}
+main .inbox .topline {
+  z-index: 8;
+  margin-top: 10px;
+  color: rgb(120, 120, 120);
+  text-shadow: 0px 0px rgb(120, 120, 120), 0px 0.5px rgb(120, 120, 120), 0px 0px rgb(120, 120, 120), 0px -0.5px rgb(120, 120, 120);
+  text-align: center;
+}
+main .inbox .topline p {
+  font: 20px/1 "Helvetica";
+  margin-bottom: 10px;
+}
+main .inbox .topline span {
+  font: 13px/1 "Pretendard Variable";
+}
+main .inbox .mbox {
+  z-index: 8;
+  width: 90%;
+  height: fit-content;
+  border-radius: 20px;
+  padding: 10%;
+  font: 11px/1 "Pretendard Variable";
+}
+main .inbox .mbox form {
+  width: 100%;
+  height: 50%;
+  color: rgb(120, 120, 120);
+}
+main .inbox .mbox form input {
+  border: 0px;
+  background-color: transparent;
+  font: bold 12px/1 "Pretendard Variable";
+  margin-bottom: 10px;
+  text-align: center;
+}
+main .inbox .mbox form .field {
+  font: bold 12px/1 "Helvetica";
+}
+main .inbox .mbox form .field #from_name {
+  border-bottom: 2px dotted rgb(63, 67, 63);
+}
+main .inbox .mbox form #tbox {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+}
+main .inbox .mbox form #tbox label {
+  margin: 10px 0px;
+}
+main .inbox .mbox form #tbox textarea {
+  width: 100%;
+  height: 80%;
+  border: none;
+  box-shadow: 0px 0px 2px rgb(120, 120, 120);
+  margin: 10px 0px;
+  padding: 20px;
+  background-color: rgba(220, 220, 220, 0.8);
+  border-radius: 30px;
+  font: bold 15px/1.5 "Pretendard Variable";
+  text-shadow: rgb(133, 35, 28);
+  color: rgb(63, 67, 63);
+}
+main .inbox .mbox form #button {
+  width: 50%;
+  height: 10%;
+  position: absolute;
+  bottom: -20%;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 10px;
+  border-radius: 20px;
+  margin-top: 20px;
+  background-color: rgba(120, 120, 120, 0.8);
+  box-shadow: 0px 0px 10px rgb(220, 220, 220), 0px 0px 10px rgb(220, 220, 220) inset;
+  color: rgb(220, 220, 220);
+  text-shadow: 0px 0px 3px rgb(220, 220, 220);
+}
+main #clicked {
+  width: 0%;
+  height: 0%;
+  opacity: 0;
+  left: -100%;
+  top: 0%;
+  overflow: hidden;
+  display: flex;
+  flex-flow: column;
+  justify-content: space-between;
+  align-items: center;
+}
+main #clicked.on {
+  opacity: 1;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+main #clicked #letterc {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0%;
+  top: 10%;
+}
+main #clicked #letterc .envv {
+  width: 100%;
+  left: 0%;
+  display: flex;
+  justify-content: center;
+  margin-top: 0px;
+}
+main #clicked #letterc .envv img {
+  width: 40%;
+}
+main #clicked #letterc .envv #ccc {
+  opacity: 0;
+  top: -300%;
+  left: 40%;
+}
+main #clicked #letterc .envv #ccc.on {
+  top: -9%;
+  transform: rotate(14deg);
+  opacity: 1;
+  transition: 0.5s;
+}
+main #clicked #letterc .envv #ddd {
+  left: 21%;
+  top: -300%;
+  opacity: 0;
+}
+main #clicked #letterc .envv #ddd.on {
+  top: -6%;
+  transform: rotate(-10deg);
+  opacity: 1;
+  transition: 1s;
+}
+main #clicked #letterc .envv #fff {
+  z-index: 0;
+  bottom: 20px;
+  left: 50%;
+  width: 60%;
+  transform: translateX(-50%);
+}
+main #clicked .topline {
+  top: 20%;
+  left: -100%;
+  transform: translateX(-50%);
+  position: absolute;
+  width: 80%;
+  height: 0px;
+  display: flex;
+  align-items: center;
+  flex-flow: column;
+}
+main #clicked .topline.on {
+  left: 50%;
+}
+main #clicked .topline img {
+  width: 100%;
+}
+main #clicked .topline .toptop {
+  position: absolute;
+  top: 0%;
+  width: 100%;
+  padding: 20%;
+  text-align: left;
+}
+main #clicked .topline .toptop p {
+  font: 18px/1 "roc-grotesk-extrawide";
+  text-align: left;
+  margin-bottom: -5px;
+}
+main #clicked .topline .toptop p span {
+  font: 16px/1 "Pretendard Variable";
+}
+main #clicked .topline .toptop span {
+  font: 12px/1 "Pretendard Variable";
+}
+main #clicked .topline .toptop .backb {
+  position: absolute;
+  width: 40%;
+  bottom: -12%;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 10px;
+  border-radius: 20px;
+  border: none;
+  box-shadow: 0px 0px 10px rgb(220, 220, 220), 0px 0px 10px rgb(220, 220, 220) inset;
+  font: bold 12px/1 "Pretendard Variable";
+  text-align: center;
+  color: rgb(120, 120, 120);
+  text-shadow: 0px 0px 3px rgb(220, 220, 220);
+}
+main #clicked .arrow {
+  width: 100%;
+  height: fit-content;
+  position: absolute;
+  top: 50%;
+  text-shadow: 0px 0px 10px rgb(120, 120, 120);
+  display: flex;
+  justify-content: space-between;
+  padding: 0px 20px;
+}
+main #clicked .arrow .left i, main #clicked .arrow .right i {
+  font-size: 20px;
+}
+main #clicked .arrow .left i:hover, main #clicked .arrow .right i:hover {
+  font-size: 25px;
+}
+main #clicked .afterbox {
+  position: absolute;
+  width: 250px;
+  left: -100%;
+  top: 19%;
+  height: fit-content;
+  transform: translate(-50%, 30%);
+  z-index: 9;
+  display: flex;
+  flex-flow: column;
+  transform-origin: top center;
+  align-items: center;
+}
+main #clicked .afterbox.on {
+  left: 50%;
+}
+main #clicked .afterbox .aabg {
+  width: 90%;
+}
+main #clicked .afterbox .aabg img {
+  width: 100%;
+}
+main #clicked .afterbox .aabox {
+  position: absolute;
+  top: 35%;
+  width: 80%;
+  height: 170px;
+  border: none;
+  color: rgb(120, 120, 120);
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  text-align: center;
+  justify-content: space-between;
+}
+main #clicked .afterbox .aabox .iii {
+  display: flex;
+  justify-content: space-between;
+  width: 80%;
+  text-align: left;
+}
+main #clicked .afterbox .aabox .iii .ii {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  box-shadow: 0px 0px 10px rgb(133, 35, 28);
+  margin: 8px 0px;
+  margin-top: 0px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-flow: row;
+}
+main #clicked .afterbox .aabox .iii .ii:hover {
+  width: 28px;
+  height: 28px;
+}
+main #clicked .afterbox .aabox .iii .ii i {
+  color: rgb(133, 35, 28);
+  opacity: 0.7;
+  width: 16px;
+}
+main #clicked .afterbox .aabox .iii .ii span {
+  font: bold 12px/1 "Helvetica";
+}
+main #clicked .afterbox .aabox .iii h1 {
+  font: bold 12px/1 "Helvetica";
+  text-shadow: 0px 0px 1px rgb(133, 35, 28);
+  margin-bottom: 10px;
+  color: rgb(133, 35, 28);
+}
+main #clicked .afterbox .aabox a {
+  height: 100px;
+  width: 80%;
+  box-shadow: 0px 0px 10px rgb(133, 35, 28), 0px 0px 10px rgb(133, 35, 28) inset;
+  border-radius: 10px;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-flow: column;
+}
+main #clicked .afterbox .aabox a h3 {
+  color: rgb(120, 120, 120);
+  font: bold 10px/1 "Helvetica";
+}
+main #clicked .afterbox .aabox a h3 span {
+  color: rgb(120, 120, 120);
+}
+main #clicked .afterbox .aabox a h3 .titi {
+  font: bold 10px/2 "Helvetica";
+  text-decoration: wavy 4px rgb(120, 120, 120);
+  border-radius: 10px;
+  padding: 0px 0px;
+}
+main #clicked .afterbox .aabox a h3 .sonsons {
+  margin-top: 10px;
+  font: bold 15px/1 "Pretendard Variable";
+  font-weight: 700;
+  text-shadow: 0px 0px 10px rgb(133, 35, 28);
+  background-color: transparent;
+  color: whitesmoke;
+  letter-spacing: -1px;
+  line-height: -1px;
+}
+main #clicked .afterbox .aabox h2 {
+  font-size: 25px;
+  margin-bottom: 10px;
+  display: flex;
+  flex-flow: column;
+}
+main #clicked .afterbox .aabox h2 span {
+  font: bold 10px/1 "Helvetica";
+  color: rgb(120, 120, 120);
+  opacity: 0.8;
+}
+main #clicked .afterbox .aabox h2:hover {
+  font-size: 28px;
+}
+main footer {
+  position: absolute;
+  bottom: 10px;
+  width: 100%;
+  height: 10px;
+  left: 0%;
+  z-index: 9;
+  font: 12px/1 "Helvetica";
+  font-weight: 700;
+  text-align: center;
+  color: rgb(120, 120, 120);
+  text-shadow: 0px 0px 10px rgb(120, 120, 120);
+}
+
+@media (min-width: 961px) {
+  body main .entrance {
+    width: 500px;
+  }
+  body main .entrance .enb, body main .entrance .enf {
+    left: 50%;
+    transform: translateX(-50%);
+    width: 500px;
+  }
+  body main .inbox.on {
+    width: 500px;
+    padding: 50px;
+  }
+  body main .inbox .mbox form #button {
+    bottom: -13%;
+  }
+  body main .inbox .letter {
+    width: 500px;
+  }
+  body main #clicked.on {
+    width: 500px;
+    padding: 50px;
+  }
+  body main #clicked .letter {
+    width: 500px;
+  }
+}
+
+/*# sourceMappingURL=cc.css.map */
